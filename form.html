@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKINGO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+        body {
+            background-image: url(./image/2.jpeg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        form hr {
+            margin: 20px 0;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="radio"], form input[type="checkbox"] {
+            width: auto;
+            margin: 0 10px 0 0;
+        }
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(235, 197, 197);
+            color: black;
+            font-size: 20px;
+            border: none;
+            border-radius: 30%;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        form button:hover {
+            border: 1px solid orange;
+        }
+        form .form-group {
+            margin-bottom: 15px;
+        }
+        form .form-group:last-of-type {
+            margin-bottom: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        h1.logoName {
+            text-align: center;
+        }
+        .form-group label {
+            font-size: 16px;
+        }
+        .form-group input[type="radio"], 
+        .form-group input[type="checkbox"] {
+            transform: scale(0.8); /* Reduce size of radio and checkbox */
+            margin-right: 5px;
+        }
+        .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+            form button {
+                font-size: 18px;
+            }
+            .form-group label {
+                font-size: 14px;
+            }
+        }
+
+        /* Adjustments for normal text */
+        .form-group label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <h1 class="logoName">Sweet Cake</h1>
+            <hr>
+        </div>
+        <div class="form-group">
+            <label for="name">Enter your Name:</label>
+            <input type="text" id="name" name="name" value="Stephen"/>
+        </div>
+        <div class="form-group">
+            <label for="phone">Enter your number:</label>
+            <input type="text" id="phone" name="phone"/>
+        </div>
+        <div class="form-group">
+            <label for="email">Enter your Email:</label>
+            <input type="email" id="email" name="email"/>
+        </div>
+        <div class="form-group">
+            <label for="city">Select the City:</label>
+            <select id="city" name="city">
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Vellore</option>
+                <option>Tirupattur</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <b>Select Cake</b><br>
+            <label>Birthday Cakes</label><input type="radio" name="cake"/>
+            <label>Photo Cakes</label><input type="radio" name="cake"/>
+            <label>Designer Cakes</label><input type="radio" name="cake"/>
+            <label>Wedding Cakes</label><input type="radio" name="cake"/>
+        </div>
+        <div class="form-group">
+            <b>Experience Flavour</b><br>
+            <label>Chocolate</label><input type="checkbox" name="flavour"/>
+            <label>Ice Cream</label><input type="checkbox" name="flavour"/>
+            <label>Fruit</label><input type="checkbox" name="flavour"/>
+            <label>Strawberry</label><input type="checkbox" name="flavour"/>
+        </div>
+        <div class="form-group">
+            <b>Select Weight</b><br>
+            <label>0.5kg</label><input type="radio" name="weight"/>
+            <label>1kg</label><input type="radio" name="weight"/>
+            <label>2kg</label><input type="radio" name="weight"/>
+            <label>4kg</label><input type="radio" name="weight"/>
+        </div>
+        <div class="form-group">
+            <label for="message"><b>Cake Message</b></label><br>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="address"><b>Delivery Address</b></label><br>
+            <textarea id="address" name="address"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Place Order</button>
+        </div>
+        <div class="form-group">
+            <hr>
+        </div>
+        <footer>
+            <p>Author: Dummy<br>
+            <a href="mailto:stylishidiot0518.com">dummy@gmail.com</a></p>
+        </footer>
+    </form>
+</body>
+</html>
